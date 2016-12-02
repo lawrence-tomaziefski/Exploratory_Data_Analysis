@@ -46,3 +46,5 @@ with(airquality, plot(Wind, Ozone, main = "Ozone and Wind in New York City", pch
 model <- lm(Ozone ~ Wind, airquality)
 ## Draw regression line on plot
 abline(model, lwd = 2)
+
+####check
