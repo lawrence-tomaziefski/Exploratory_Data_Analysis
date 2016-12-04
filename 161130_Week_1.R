@@ -46,25 +46,3 @@ with(airquality, plot(Wind, Ozone, main = "Ozone and Wind in New York City", pch
 model <- lm(Ozone ~ Wind, airquality)
 ## Draw regression line on plot
 abline(model, lwd = 2)
-
-##saving to a png file
-library(datasets) ## Create plot on screen device
-with(faithful, plot(eruptions, waiting))
- ## Add a main title
-title(main = "Old Faithful Geyser data")
-## Copy my plot to a PNG file
-dev.copy(png, file = "geyserplot.png")
-## Don't forget to close the PNG device!
-dev.off()
-
-
-#####set up different regions
-par(mfrow = c(1, 2), mar = c(5, 4, 2, 1))
-
-par(mfrow = c(1, 3), mar = c(4, 4, 2, 1), oma = c(0, 0, 2, 0))
-
-mtext("Ozone and Weather in New York City", outer = TRUE) # puts a title on the outside of multiple plots
-
-
-#Send plot to pdf device 
-pdf(file="myplot.pdf")
